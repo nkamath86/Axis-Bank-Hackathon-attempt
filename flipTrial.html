@@ -1,0 +1,16 @@
+<head>
+ <link rel="stylesheet" href="FlipStyle.css">
+</head>
+<body>
+<div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+	<div class="flipper">
+		<div class="front">
+			<h1>HEllo</h1>
+		</div>
+		<div class="back">
+			<h1> WElcome</h1>
+		</div>
+	</div>
+</div>
+<button onclick="document.querySelector('.flip-container').classList.toggle('active');"> Submit </button>
+</body>
