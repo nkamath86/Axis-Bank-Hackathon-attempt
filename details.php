@@ -44,6 +44,13 @@ include('header.php');
   <td><label class="control-label" for="inputSmall">Enter Return URL : </label></td>
   <td><input name="returnURL" class="form-control input-sm" type="text" id="inputSmall" width="400px"></td>
 </tr>	
+<tr><td>
+  <label> </label>
+</td></tr>
+<tr>
+  <td><label class="control-label" for="inputSmall">Enter Type of Merchant: </label></td>
+  <td><input name="mcc" class="form-control input-sm" type="text" id="inputSmall" width="400px" required="true"></td>
+</tr> 
 </table>
 
 <input type="checkbox" name="pay" value="cc"><b>Credit Card</b>
@@ -67,6 +74,9 @@ include('header.php');
 <input type="radio" name="il" value="java"><b>Java</b>
 <input type="radio" name="il" value="others"><b>Others</b>
 </fieldset>
+<br>
+<br>
+
 <br>
 <br>
 <input class="btn btn-success" style="background-color: #8C001A;" type="submit" name="submit" value="Submit"> </input>
@@ -101,3 +111,7 @@ else
   header('location:agree.php');
 ?>
 </center>
+
+
+
+
