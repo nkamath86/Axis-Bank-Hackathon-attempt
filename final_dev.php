@@ -1,7 +1,6 @@
 <?php
-error_reporting('E_NOTICE');
 $con=mysql_connect("localhost","root","");
-$select=mysql_select_db("aadhaar",$con);
+$select=mysql_select_db("aadhar",$con);
 $query="SELECT * From information";
 $result=mysql_query($query);
 $rows=mysql_fetch_array($result);
@@ -19,7 +18,9 @@ $rows=mysql_fetch_array($result);
 
 <?php
 include('header.php');
+
 $code=rand(100000,500000)."AXISMER";
+
 ?>
 
 
@@ -36,12 +37,17 @@ $code=rand(100000,500000)."AXISMER";
 <tr><td>Pan          :  </td><td><?php echo $rows['pan']; ?></td></tr> <br>
 <tr><td>Phone Number       :</td><td>  <?php echo $rows['phone']; ?></td></tr><br>
 <tr><td>Date of Birth      :</td> <td> <?php echo $rows['dob']; ?></td></tr><br>
-<tr><td>Place of Residence : </td><td> <?php echo $rows['street'].",".$rows['district'].",".$rows['state'].",".$rows['pincode'];?></td></tr></table>  
+<tr><td>Place of Residence : </td><td> <?php echo $rows['street'].",".$rows['district'].",".$rows['state'].",".$rows['pincode'];?></td></tr>
+<tr><td>Constitution      :</td> <td> <?php echo $rows['constitution']; ?></td></tr><br>
+<tr><td>Channel     :</td> <td> <?php echo $rows['channel']; ?></td></tr><br>
+<tr><td>Operation System      :</td> <td> <?php echo $rows['operating_system']; ?></td></tr><br>
+<tr><td>Interface      :</td> <td> <?php echo $rows['interface_language']; ?></td></tr><br>
+</table>  
   
 </label>
 
 </fieldset>
-<a href="http://localhost/Axis/otp.php?code=<?php echo $code;?>">Click here for authentication</a> 
+<a href="http://localhost:81/axis/otp.php?code=<?php echo $code;?>">Click here for authentication</a> 
 
 </center>
 
@@ -51,10 +57,9 @@ $code=rand(100000,500000)."AXISMER";
 
  <?php
 //if "email" variable is filled out, send email
-require_once('/opt/lampp/htdocs/Axis/PHPMailer-master/class.phpmailer.php');
+require_once('C:/xampp/htdocs/Axis/PHPMailer-master/class.phpmailer.php');
 
-include("/opt/lampp/htdocs/Axis/PHPMailer-master/class.smtp.php"); // optional, gets called from within class.phpmailer.php if not already loaded
-
+include("C:/xampp/htdocs/Axis/PHPMailer-master/class.smtp.php"); // optional, gets called from within class.phpmailer.php if not already loaded
 
  
 
