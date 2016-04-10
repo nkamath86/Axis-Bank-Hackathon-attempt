@@ -30,12 +30,20 @@ include('header.php');
 </tr>
 <tr>
 <td>
-  <label> </label>
+	<label> </label>
 </td>
 </tr>
+
+  <td><label class="control-label" for="inputSmall">Enter Merchant Website Address : </label></td>
+  <td><input name="url" class="form-control input-sm" type="text" id="inputSmall" width="400px"></td>
+</tr>
+<tr><td>
+  <label> </label>
+</td></tr>
+<tr>
 <tr>
   <td><label class="control-label" for="inputSmall">Enter Payment Website Address : </label></td>
-  <td><input name="url" class="form-control input-sm" type="text" id="inputSmall" width="400px"></td>
+  <td><input name="payment" class="form-control input-sm" type="text" id="inputSmall" width="400px"></td>
 </tr>
 <tr><td>
   <label> </label>
@@ -43,7 +51,7 @@ include('header.php');
 <tr>
   <td><label class="control-label" for="inputSmall">Enter Return URL : </label></td>
   <td><input name="returnURL" class="form-control input-sm" type="text" id="inputSmall" width="400px"></td>
-</tr> 
+</tr>	
 </table>
 
 <input type="checkbox" name="pay" value="cc"><b>Credit Card</b>
@@ -103,7 +111,7 @@ function alexa_rank($url){
 if($url == null)
   echo "";
 else if(!alexa_rank($url))
-  echo "Please Visit the Bank"; 
+  {echo "There needs to be a further check required." ; ?> <br><?php echo "Please Visit the nearest branch for further processing.Thank You."; }
 else
   header('location:agree.php');
 ?>
