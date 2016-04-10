@@ -12,7 +12,8 @@
     <!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
 </head>
 <body style="background:#F6F9FC; font-family:Arial;">
-    <div style="width: 500px; margin: 0 auto; padding: 120px 0 40px;">
+  <?php include('header.php');?>
+    <div style="width: 500px; margin: 0 auto;">
         <ul class="tabs" data-persist="true">
             <li><a href="#view1">Credit Card</a></li>
             <li><a href="#view2">Debit Card</a></li>
@@ -27,7 +28,7 @@
 				<tr>
   					<!-- <td><label class="control-label" for="inputSmall">Expiry Date : </label></td> -->
   					<td>
-  						<SELECT class="form-control input-lg"placeholder=""name="month" style="height: 40px;width:150px">
+  						<SELECT class="form-control input-lg"placeholder=""name="month" style="height: 40px;width:150px">&nbsp;&nbsp;&nbsp;
   						<option style="color:gray">Month</option>
   							<option>
   								01(Jan)
@@ -48,7 +49,7 @@
 
   					</td>
   					<td>
-  						<SELECT class="form-control input-lg"placeholder=""name="year" style="height: 40px;width:150px">
+  						<SELECT class="form-control input-lg"placeholder=""name="year" style="height: 40px;width:150px">&nbsp;&nbsp;&nbsp;
   						<option style="color:gray">Year</option>
   							<option>
   								2018
