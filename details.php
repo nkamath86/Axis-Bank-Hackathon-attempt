@@ -1,5 +1,20 @@
 <?php
-error_reporting('E_NOTICE');
+// session_start();
+// $_SESSION['aadhaar']=$_POST['aadhaar'];
+// error_reporting('E_NOTICE');
+// echo $_SESSION['aadhaar'];
+// $_POST['pan'];
+// $pan=$_POST['pan'];
+// $con=mysql_connect("localhost","root","");
+// $select=mysql_select_db("aadhaar",$con);
+// // echo $pan;
+// $query="Update information set pan=".$pan." where pincode='110002' ";
+// $result=mysql_query($query);
+if(!$result)
+{
+  echo mysql_error();
+}
+
 ?>
 <html>
 <head>
@@ -34,8 +49,10 @@ include('header.php');
 </td>
 </tr>
 
+<!-- <input type="hidden" name='aadhaar' value=<?php #echo $aadhaar;?> ></input> -->
+
   <td><label class="control-label" for="inputSmall">Enter Merchant Website Address : </label></td>
-  <td><input name="url" class="form-control input-sm" type="text" id="inputSmall" width="400px"></td>
+  <td><input name="url" class="form-control input-sm" placeholder="Eg. : flipkart.com" type="text" id="inputSmall" width="400px"></td>
 </tr>
 <tr><td>
   <label> </label>
@@ -113,6 +130,8 @@ if($url == null)
 else if(!alexa_rank($url))
   {echo "There needs to be a further check required." ; ?> <br><?php echo "Please Visit the nearest branch for further processing.Thank You."; }
 else
+  
   header('location:agree.php');
+
 ?>
 </center>

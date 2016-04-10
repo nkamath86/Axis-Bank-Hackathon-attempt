@@ -1,55 +1,160 @@
-<?php session_start();
-
-if(isset($_POST['Submit'])){
-	// code for check server side validation
-	if(empty($_SESSION['captcha_code'] ) || strcasecmp($_SESSION['captcha_code'], $_POST['captcha_code']) != 0){  
-		$msg="<span style='color:red'>The Validation code does not match!</span>";// Captcha verification is incorrect.		
-	}else{// Captcha verification is Correct. Final Code Execute here!		
-		$msg="<span style='color:green'>The Validation code has been matched.</span>";		
-	}
-}	
-?>
-<!doctype html>
+<!DOCTYPE html>
 <html>
 <head>
-<meta charset="utf-8">
-<title>PHP Secure Professional Captcha.</title>
-<link href="./css/style.css" rel="stylesheet">
-<script type='text/javascript'>
-function refreshCaptcha(){
-	var img = document.images['captchaimg'];
-	img.src = img.src.substring(0,img.src.lastIndexOf("?"))+"?rand="+Math.random()*1000;
-}
-</script>
+    <title>Tabbed Content</title>
+    <script src="tabcontent.js" type="text/javascript"></script>
+    <link href="tabcontent.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="bootstrap.css">
+  <link rel="stylesheet" href="bootstrap.min.css">
+  <link rel="stylesheet" href="bootstrap-theme.css">
+  <link rel="stylesheet" href="bootstrap-theme.min.css">
+  
+    <!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
 </head>
-<body>
-<div id="frame0">
-  <h1>PHP Secure Professional Captcha Demo.</h1>
-  <p>More tutorials <a href="http://www.w3schools.in/">www.w3schools.in</a></p>
-</div>
-<br>
+<body style="background:#F6F9FC; font-family:Arial;">
+    <div style="width: 500px; margin: 0 auto; padding: 120px 0 40px;">
+        <ul class="tabs" data-persist="true">
+            <li><a href="#view1">Credit Card</a></li>
+            <li><a href="#view2">Debit Card</a></li>
+            <li><a href="#view3">Net Banking</a></li>
+        </ul>
+        <center>
+        <div class="tabcontents">
+            <div id="view1" style="padding: 2px; margin: 2px;">
+                
+				<input class="form-control input-lg" placeholder="Card No." type="number" id="inputSmall" name="legal"  required="true" style="height:40px; width:500px;">
+				<table style="margin:10%">
+				<tr>
+  					<!-- <td><label class="control-label" for="inputSmall">Expiry Date : </label></td> -->
+  					<td>
+  						<SELECT class="form-control input-lg"placeholder=""name="month" style="height: 40px;width:150px">
+  						<option style="color:gray">Month</option>
+  							<option>
+  								01(Jan)
+  							</option>
+  							
+  							<option>02(Feb)</option>
+  							<option>03(Mar)</option>
+  							<option>04(Apr)</option>
+  							<option>05(May)</option>
+  							<option>06(Jun)</option>
+  							<option>07(Jul)</option>
+  							<option>08(Aug)</option>
+  							<option>09(Sep)</option>
+  							<option>10(Oct)</option>
+  							<option>11(Nov)</option>
+	  						<option>12(Dec)</option>
+	  						</SELECT>
 
-<form action="" method="post" name="form1" id="form1" >
-  <table width="400" border="0" align="center" cellpadding="5" cellspacing="1" class="table">
-    <?php if(isset($msg)){?>
-    <tr>
-      <td colspan="2" align="center" valign="top"><?php echo $msg;?></td>
-    </tr>
-    <?php } ?>
-    <tr>
-      <td align="right" valign="top"> Validation code:</td>
-      <td><img src="captcha.php?rand=<?php echo rand();?>" id='captchaimg'><br>
-        <label for='message'>Enter the code above here :</label>
-        <br>
-        <input id="captcha_code" name="captcha_code" type="text">
-        <br>
-        Can't read the image? click <a href='javascript: refreshCaptcha();'>here</a> to refresh.</td>
-    </tr>
-    <tr>
-      <td>&nbsp;</td>
-      <td><input name="Submit" type="submit" onclick="return validate();" value="Submit" class="button1"></td>
-    </tr>
-  </table>
-</form>
+  					</td>
+  					<td>
+  						<SELECT class="form-control input-lg"placeholder=""name="year" style="height: 40px;width:150px">
+  						<option style="color:gray">Year</option>
+  							<option>
+  								2018
+  							</option>
+  							
+  							<option>2019</option>
+  							<option>2020</option>
+  							<option>2021</option>
+  							<option>2022</option>
+  							<option>2023</option>
+  							<option>2024</option>
+  							<option>2025</option>
+  							<option>2026</option>
+  							<option>2027</option>
+  							<option>2028</option>
+	  						<option>2029</option>
+	  						<option>2030</option>
+	  						<option>2031</option>
+	  						<option>2032</option>
+	  						<option>2033</option>
+	  						</SELECT>
+  					</td>
+					<!-- <td><label> </label></td> -->
+  					<!-- <td><label class="control-label" for="inputSmall">CVV No. : </label></td> -->
+  					<td><input class="form-control input-lg" type="password" id="inputSmall" size="3" style="height:40px; width:150px" min="0" max="999" placeholder="C V V No." name="legal" required="true"></td>
+				</tr>
+				</table>
+				<input type="username" name="firstname" id="firstname" class="form-control input-lg" required="required" style="width: 500px" 
+                    placeholder="first name">
+                
+            </div>
+            <div id="view2" style="padding: 2px; margin: 2px;">
+                <input class="form-control input-lg" placeholder="Card No." type="number" id="inputSmall" name="legal"  required="true" style="height:40px; width:500px;">
+				<table style="margin:10%">
+				<tr>
+  					<!-- <td><label class="control-label" for="inputSmall">Expiry Date : </label></td> -->
+  					<td>
+  						<SELECT class="form-control input-lg"placeholder=""name="month" style="height: 40px;width:150px">
+  						<option style="color:gray">Month</option>
+  							<option>
+  								01(Jan)
+  							</option>
+  							
+  							<option>02(Feb)</option>
+  							<option>03(Mar)</option>
+  							<option>04(Apr)</option>
+  							<option>05(May)</option>
+  							<option>06(Jun)</option>
+  							<option>07(Jul)</option>
+  							<option>08(Aug)</option>
+  							<option>09(Sep)</option>
+  							<option>10(Oct)</option>
+  							<option>11(Nov)</option>
+	  						<option>12(Dec)</option>
+	  						</SELECT>
+
+  					</td>
+  					<td>
+  						<SELECT class="form-control input-lg"placeholder=""name="year" style="height: 40px;width:150px">
+  						<option style="color:gray">Year</option>
+  							<option>
+  								2018
+  							</option>
+  							
+  							<option>2019</option>
+  							<option>2020</option>
+  							<option>2021</option>
+  							<option>2022</option>
+  							<option>2023</option>
+  							<option>2024</option>
+  							<option>2025</option>
+  							<option>2026</option>
+  							<option>2027</option>
+  							<option>2028</option>
+	  						<option>2029</option>
+	  						<option>2030</option>
+	  						<option>2031</option>
+	  						<option>2032</option>
+	  						<option>2033</option>
+	  						</SELECT>
+  					</td>
+					<!-- <td><label> </label></td> -->
+  					<!-- <td><label class="control-label" for="inputSmall">CVV No. : </label></td> -->
+  					<td><input class="form-control input-lg" type="password" id="inputSmall" size="3" style="height:40px; width:150px" min="0" max="999" placeholder="C V V No." name="legal" required="true"></td>
+				</tr>
+				</table>
+				<input type="username" name="firstname" id="firstname" class="form-control input-lg" required="required" style="width: 500px" 
+                    placeholder="first name">
+                
+				
+            </div>
+            <div id="view3">
+                <center>
+                	<img src="Axis_B.jpg">
+                </center>
+                <table>
+                <tr><td>
+                	Login :</td><td> <input type="text" name="firstname" id="firstname" class="form-control input-lg" required="required" placeholder="first name"></td>
+                	</tr>
+                	<br><tr><td> <label></label></td></tr>
+                	<tr><td><br>Password :</td><td> <input class="form-control input-lg" type="password" placeholder="Password" id="inputSmall" name="legal" style="height:40px; width:300px;border-radius: 2px" required="true"></input></td></tr>
+                </table>
+                
+            </div>
+        </div>
+      </center>
+    </div>
 </body>
 </html>

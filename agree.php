@@ -1,3 +1,8 @@
+<?php
+session_start();
+include('header.php');
+echo $_SESSION['aadhaar'];
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -5,9 +10,7 @@
 	<title></title>
 </head>
 <body>
-<?php
-include('header.php');
-?>
+
 <center>
 <ol style="margin:5%;margin-top: 0px" class="progtrckr" data-progtrckr-steps="5">
     <li class="progtrckr-done">Step 1</li>
@@ -48,12 +51,15 @@ Signature
 
 Name of Proprietor:
 </textarea>
+<?php 
+echo $_SESSION['aadhaar'];
+?>
 <br>
 <br>	
 <img style="margin-left: 4%"src="schedule.png">
 <table cellspacing="5px" cellpadding="5px" align="center">
 <tr>
-<td><form action="final.php" method="POST">
+<td><form action="final_dev.php" method="POST">
 <td> <input type="submit" value="I Agree"></input></td>
 </form>
 <form action="Pan.php" method="POST">
