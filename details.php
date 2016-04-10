@@ -10,6 +10,7 @@
 // // echo $pan;
 // $query="Update information set pan=".$pan." where pincode='110002' ";
 // $result=mysql_query($query);
+error_reporting('E_NOTICE');
 if(!$result)
 {
   echo mysql_error();
