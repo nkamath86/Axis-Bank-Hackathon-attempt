@@ -44,13 +44,6 @@ include('header.php');
   <td><label class="control-label" for="inputSmall">Enter Return URL : </label></td>
   <td><input name="returnURL" class="form-control input-sm" type="text" id="inputSmall" width="400px"></td>
 </tr> 
-<tr><td>
-  <label> </label>
-</td></tr>
-<tr>
-  <td><label class="control-label" for="inputSmall">Enter Type of Merchant: </label></td>
-  <td><input name="mcc" class="form-control input-sm" type="text" id="inputSmall" width="400px" required="true"></td>
-</tr> 
 </table>
 
 <input type="checkbox" name="pay" value="cc"><b>Credit Card</b>
@@ -72,11 +65,15 @@ include('header.php');
 <input type="radio" name="il" value="asp"> <b>ASP</b>
 <input type="radio" name="il" value="aspx"><b>ASPX</b>
 <input type="radio" name="il" value="java"><b>Java</b>
-<input type="radio" name="il" value="others"><b>Others</b>
-</fieldset>
-<br>
-<br>
 
+<table cellspacing="5%" cellpadding="50px"><tr><td><input type="radio" name="il"> <b>Others &nbsp;&nbsp;&nbsp;</b> </td>
+  <td><br></td>
+  <td>
+  <input name="others" class="form-control input-sm" type="text" placeholder="Please Specify" id="inputSmall" width="100px">
+  </td>
+  </tr>
+  <table>
+</fieldset>
 <br>
 <br>
 <input class="btn btn-success" style="background-color: #8C001A;" type="submit" name="submit" value="Submit"> </input>
@@ -111,7 +108,3 @@ else
   header('location:agree.php');
 ?>
 </center>
-
-
-
-

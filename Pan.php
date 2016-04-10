@@ -107,12 +107,18 @@ include('header.php');
   <input type="radio" name="constitution" value="other"><b>Trust</b>
   <input type="radio" name="constitution" value="male"><b> Private Company
   <input type="radio" name="constitution" value="female"><b>Public Company
-  <input type="radio" name="constitution" value="other"> <b>Sole Proprieter<br>
+  <input type="radio" name="constitution" value="other"> <b>Sole Proprieter
   <input type="radio" name="constitution" value="male" > <b>HUF
   <input type="radio" name="constitution" value="female"> <b>Government
   <input type="radio" name="constitution" value="other"><b>Society
-  <input type="radio" name="constitution" value="male"><b> Associated Persons
-  <input type="radio" name="constitution" value="female"> <b>Others
+  <input type="radio" name="constitution" value="male"><b> Associated Persons<br>
+  <table cellspacing="5%" cellpadding="50px"><tr><td><input type="radio" name="constitution"> <b>Others &nbsp;&nbsp;&nbsp;</b> </td>
+  <td><br></td>
+  <td>
+  <input name="others" class="form-control input-sm" type="text" placeholder="Please Specify" id="inputSmall" width="100px">
+  </td>
+  </tr>
+  <table>
   </fieldset>
   <br><br>
   <center>
