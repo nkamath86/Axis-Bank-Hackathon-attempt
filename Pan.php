@@ -49,7 +49,7 @@ include('header.php');
 <table cellpadding="50px" cellspacing="50px" style="margin-top:10%;margin-bottom: 2%">
 <tr>
   <td><label class="control-label" for="inputSmall">Enter Legal Name : </label></td>
-  <td><input class="form-control input-sm" type="text" id="inputSmall" name="legal" width="400px" required="true"></td>
+  <td><input class="form-control input-sm" type="text" pattern="[A-Za-z]{3,18}"  id="inputSmall" name="legal" width="400px" required="true"></td>
 </tr>
 <tr>
 <td>
@@ -67,7 +67,7 @@ include('header.php');
 </tr>
 <tr>
   <td><label class="control-label" for="inputSmall">Enter PAN Card Number of the Merchant: </label></td>
-  <td><input name="pan" class="form-control input-sm" type="text" id="inputSmall" width="400px" required="true"></td>
+  <td><input name="pan" class="form-control input-sm" type="text" id="inputSmall" minlength="10" maxlength="10" width="400px" required="true"></td>
 
 </tr>
 <tr>
@@ -77,7 +77,7 @@ include('header.php');
 </tr>
 <tr>
   <td><label class="control-label" for="inputSmall">Enter PAN Card Number of the Merchant Promoter : </label></td>
-  <td><input name="pan" class="form-control input-sm" type="text" id="inputSmall" width="400px" required="true"></td>
+  <td><input name="pan" class="form-control input-sm" type="text" id="inputSmall" minlength="10" maxlength="10" width="400px" required="true"></td>
 
 </tr>
 <tr>
@@ -87,7 +87,7 @@ include('header.php');
 </tr>
 <tr>
   <td><label class="control-label" for="inputSmall">Enter Current Account Number : </label></td>
-  <td><input class="form-control input-sm" type="number" id="inputSmall" name="account" width="400px" required="true"></td>
+  <td><input class="form-control input-sm" type="number" id="inputSmall" pattern="[0-9]{12}" name="account" minlength="12" maxlength="12" width="400px" required="true"></td>
 </tr>
 <tr>
 <td>
