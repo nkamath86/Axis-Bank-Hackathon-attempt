@@ -1,7 +1,8 @@
 <?php
-session_start();
+// session_start();
 include('header.php');
-echo $_SESSION['aadhaar'];
+// echo $_SESSION['aadhaar'];
+error_reporting('E_NOTICE');
 ?>
 <!DOCTYPE html>
 <html>
