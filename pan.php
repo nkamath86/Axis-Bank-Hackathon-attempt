@@ -12,7 +12,7 @@ if(isset($_POST['Submit'])){
     $select=mysql_select_db("aadhaar",$con);
     $query="Update information set pan=".$pan." where pincode='110002' ";
     $result=mysql_query($query);
-    header('location:Pan.php');
+    header('location:pan.php');
   }
   else{// Captcha verification is Correct. Final Code Execute here!    
     $msg="<span style='color:green'>The Validation code has been matched.</span>";  
